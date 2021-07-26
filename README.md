@@ -56,7 +56,7 @@ Topic: t1-stretched-with-observers	TopicId: qx9kT_KHR2a3OBitNxAJLQ	PartitionCoun
 
 ```
 # Do each of these in a separate terminal
-./scripts/lhs-run-producert1-stretched.sh
+./scripts/lhs-run-producer-t1-stretched.sh
 ./scripts/lhs-run-producer-t1-stretched-with-observers.sh
 ./scripts/lhs-run-consumer-t1-stretched.sh
 ./scripts/lhs-run-consumer-t1-stretched-with-observers.sh
