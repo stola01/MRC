@@ -91,8 +91,9 @@ services:
       KAFKA_CONFLUENT_MONITORING_INTERCEPTER_BOOTSTRAP_SERVERS: broker-ccc:19098
       KAFKA_JMX_PORT: 8091
 #      KAFKA_CONFLUENT_LOG_PLACEMENT_CONSTRAINTS: '{"version": 1,"replicas": [{"count": 2, "constraints": {"rack": "west"}}], "observers": [{"count": 2, "constraints": {"rack": "east"}}]}'
+#      KAFKA_CONFLUENT_OFFSETS_TOPIC_PLACEMENT_CONSTRAINTS: '{"version": 1,"replicas": [{"count": 1, "constraints": {"rack": "west-f"}},{"count": 1, "constraints": {"rack": "east-f"}}]}'
       KAFKA_OFFSETS_TOPIC_NUM_PARTITIONS: 4
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 2
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 3
       KAFKA_LOG4J_ROOT_LOGLEVEL: INFO
       KAFKA_LOG4J_LOGGERS: "kafka.controller=INFO,state.change.logger=INFO,kafka.log.LogCleaner=INFO,kafka=INFO"
       KAFKA_CONFLUENT.REPORTERS.TELEMETRY.AUTO.ENABLE: 'false'
@@ -127,8 +128,9 @@ services:
       KAFKA_CONFLUENT_MONITORING_INTERCEPTER_BOOTSTRAP_SERVERS: broker-ccc:19098
       KAFKA_JMX_PORT: 8092
 #      KAFKA_CONFLUENT_LOG_PLACEMENT_CONSTRAINTS: '{"version": 1,"replicas": [{"count": 2, "constraints": {"rack": "west"}}], "observers": [{"count": 2, "constraints": {"rack": "east"}}]}'
+#      KAFKA_CONFLUENT_OFFSETS_TOPIC_PLACEMENT_CONSTRAINTS: '{"version": 1,"replicas": [{"count": 1, "constraints": {"rack": "west-f"}},{"count": 1, "constraints": {"rack": "east-f"}}]}'
       KAFKA_OFFSETS_TOPIC_NUM_PARTITIONS: 4
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 2
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 3
       CONFLUENT_METRICS_ENABLE: 'true'
       KAFKA_LOG4J_ROOT_LOGLEVEL: INFO
       KAFKA_LOG4J_LOGGERS: "kafka.controller=INFO,state.change.logger=INFO,kafka.log.LogCleaner=INFO,kafka=INFO"
@@ -167,8 +169,9 @@ services:
       KAFKA_CONFLUENT_MONITORING_INTERCEPTER_BOOTSTRAP_SERVERS: broker-ccc:19098
       KAFKA_JMX_PORT: 8093
 #      KAFKA_CONFLUENT_LOG_PLACEMENT_CONSTRAINTS: '{"version": 1,"replicas": [{"count": 2, "constraints": {"rack": "west"}}], "observers": [{"count": 2, "constraints": {"rack": "east"}}]}'
+#      KAFKA_CONFLUENT_OFFSETS_TOPIC_PLACEMENT_CONSTRAINTS: '{"version": 1,"replicas": [{"count": 1, "constraints": {"rack": "west-f"}},{"count": 1, "constraints": {"rack": "east-f"}}]}'
       KAFKA_OFFSETS_TOPIC_NUM_PARTITIONS: 4
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 2
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 3
       CONFLUENT_METRICS_ENABLE: 'true'
       KAFKA_LOG4J_ROOT_LOGLEVEL: INFO
       KAFKA_LOG4J_LOGGERS: "kafka.controller=INFO,state.change.logger=INFO,kafka.log.LogCleaner=INFO,kafka=INFO"
@@ -206,8 +209,9 @@ services:
       KAFKA_CONFLUENT_MONITORING_INTERCEPTER_BOOTSTRAP_SERVERS: broker-ccc:19098
       KAFKA_JMX_PORT: 8094
 #      KAFKA_CONFLUENT_LOG_PLACEMENT_CONSTRAINTS: '{"version": 1,"replicas": [{"count": 2, "constraints": {"rack": "west"}}], "observers": [{"count": 2, "constraints": {"rack": "east"}}]}'
+#      KAFKA_CONFLUENT_OFFSETS_TOPIC_PLACEMENT_CONSTRAINTS: '{"version": 1,"replicas": [{"count": 1, "constraints": {"rack": "west-f"}},{"count": 1, "constraints": {"rack": "east-f"}}]}'
       KAFKA_OFFSETS_TOPIC_NUM_PARTITIONS: 4
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 2
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 3
       CONFLUENT_METRICS_ENABLE: 'true'
       KAFKA_LOG4J_ROOT_LOGLEVEL: INFO
       KAFKA_LOG4J_LOGGERS: "kafka.controller=INFO,state.change.logger=INFO,kafka.log.LogCleaner=INFO,kafka=INFO"
@@ -246,8 +250,9 @@ services:
       KAFKA_CONFLUENT_MONITORING_INTERCEPTER_BOOTSTRAP_SERVERS: broker-ccc:19098
       KAFKA_JMX_PORT: 8092
 #      KAFKA_CONFLUENT_LOG_PLACEMENT_CONSTRAINTS: '{"version": 1,"replicas": [{"count": 2, "constraints": {"rack": "west"}}], "observers": [{"count": 2, "constraints": {"rack": "east"}}]}'
+#      KAFKA_CONFLUENT_OFFSETS_TOPIC_PLACEMENT_CONSTRAINTS: '{"version": 1,"replicas": [{"count": 1, "constraints": {"rack": "west-f"}},{"count": 1, "constraints": {"rack": "east-f"}}]}'
       KAFKA_OFFSETS_TOPIC_NUM_PARTITIONS: 4
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 2
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 3
       CONFLUENT_METRICS_ENABLE: 'true'
       KAFKA_LOG4J_ROOT_LOGLEVEL: INFO
       KAFKA_LOG4J_LOGGERS: "kafka.controller=INFO,state.change.logger=INFO,kafka.log.LogCleaner=INFO,kafka=INFO"
@@ -287,8 +292,9 @@ services:
       KAFKA_CONFLUENT_MONITORING_INTERCEPTER_BOOTSTRAP_SERVERS: broker-ccc:19098
       KAFKA_JMX_PORT: 8092
 #      KAFKA_CONFLUENT_LOG_PLACEMENT_CONSTRAINTS: '{"version": 1,"replicas": [{"count": 2, "constraints": {"rack": "west"}}], "observers": [{"count": 2, "constraints": {"rack": "east"}}]}'
+#      KAFKA_CONFLUENT_OFFSETS_TOPIC_PLACEMENT_CONSTRAINTS: '{"version": 1,"replicas": [{"count": 1, "constraints": {"rack": "west-f"}},{"count": 1, "constraints": {"rack": "east-f"}}]}'
       KAFKA_OFFSETS_TOPIC_NUM_PARTITIONS: 4
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 2
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 3
       CONFLUENT_METRICS_ENABLE: 'true'
       KAFKA_LOG4J_ROOT_LOGLEVEL: INFO
       KAFKA_LOG4J_LOGGERS: "kafka.controller=INFO,state.change.logger=INFO,kafka.log.LogCleaner=INFO,kafka=INFO"

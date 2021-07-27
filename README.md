@@ -12,15 +12,16 @@ docker-compose up -d
 
 # Wait for 60 seconds or so and check that services are running
 docker-compose ps
-
+```
+```
 # If there are issues, start the services in parts, leave some time between each command
 docker-compose up -d zookeeper-ccc broker-ccc
 docker-compose up -d broker-west-1 broker-west-2 broker-east-3 broker-east-4
 docker-compose up -d broker-west-5 broker-east-6
 docker-compose up -d control-center
-
+```
+```
 # Check everything is healthy by pointing a browser at http://localhost:9021
-
 ```
 
 
@@ -55,12 +56,16 @@ Topic: t1-stretched-with-observers	TopicId: qx9kT_KHR2a3OBitNxAJLQ	PartitionCoun
 ### 4. Run producers and consumers (do each of these in a different terminal)
 
 ```
-# Do each of these in a separate terminal
 ./scripts/lhs-run-producer-t1-stretched.sh
+```
+```
 ./scripts/lhs-run-producer-t1-stretched-with-observers.sh
+```
+```
 ./scripts/lhs-run-consumer-t1-stretched.sh
+```
+```
 ./scripts/lhs-run-consumer-t1-stretched-with-observers.sh
-
 ```
 
 
