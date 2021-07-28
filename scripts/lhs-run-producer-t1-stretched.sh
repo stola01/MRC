@@ -18,6 +18,6 @@ rm -f ${TOPICNAME}.dat
 sleep 1
 
 echo ">>> Producing to ${TOPICNAME}"
-tail -f ${TOPICNAME}.dat | docker-compose exec -T broker-east-3 kafka-console-producer --bootstrap-server broker-west-1:19091,broker-east-3:19093 --topic ${TOPICNAME} --request-required-acks all
+tail -f ${TOPICNAME}.dat | docker-compose exec -T broker-east-3 kafka-console-producer --bootstrap-server broker-west-1:19091,broker-east-3:19093 --topic ${TOPICNAME} --request-required-acks all --message-send-max-retries 10
 
 
