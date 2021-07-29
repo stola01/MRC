@@ -80,11 +80,13 @@ Topic: t1-stretched-with-observers	TopicId: qx9kT_KHR2a3OBitNxAJLQ	PartitionCoun
 # Stop the brokers
 docker-compose stop broker-west-1 broker-west-2 broker-west-5
 
-# Notice how the producer for t1-stretched get producer errors
+# Notice how the producer for t1-stretched get's producer errors
 ERROR Error when sending message to topic t1-stretched with key: null, value: 55 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
 org.apache.kafka.common.errors.NotEnoughReplicasException: Messages are rejected since there are fewer in-sync replicas than required.
 
-# However the producer to t1-stretched-with-observers continues uninterrupted (may get some metadata refresh messages)
+# However the producer to t1-stretched-with-observers continues uninterrupted
+
+# Note both producers will get metadata refresh messages
 
 # Describe the topics
 ./scripts/lhs-describe-topics.sh
