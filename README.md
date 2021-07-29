@@ -15,7 +15,7 @@ docker-compose ps
 ```
 If there are issues, start the services in parts, leave some time between each command
 ```
-docker-compose up -d zookeeper-ccc broker-ccc
+docker-compose up -d zookeeper-central broker-ccc
 ```
 ```
 docker-compose up -d broker-west-1 broker-west-2 broker-east-3 broker-east-4
