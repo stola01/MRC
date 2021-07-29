@@ -311,18 +311,18 @@ services:
     cap_add:
       - NET_ADMIN
 
-#  zookeeper-ccc:
-#    image: confluentinc/cp-zookeeper:${CONFLUENT_DOCKER_TAG}
-#    hostname: zookeeper-ccc
-#    container_name: zookeeper-ccc
-#    networks:
-#      - n1
-#    ports:
-#      - "2188:2188"
-#    environment:
-#      ZOOKEEPER_SERVER_ID: 4
-#      ZOOKEEPER_CLIENT_PORT: 2188
-#      ZOOKEEPER_SERVERS: zookeeper-ccc:2888:3888
+  zookeeper-ccc:
+    image: confluentinc/cp-zookeeper:${CONFLUENT_DOCKER_TAG}
+    hostname: zookeeper-ccc
+    container_name: zookeeper-ccc
+    networks:
+      - n1
+    ports:
+      - "2188:2188"
+    environment:
+      ZOOKEEPER_SERVER_ID: 4
+      ZOOKEEPER_CLIENT_PORT: 2188
+      ZOOKEEPER_SERVERS: zookeeper-ccc:2888:3888
 
   broker-ccc:
     image: confluentinc/cp-server:${CONFLUENT_DOCKER_TAG}
@@ -341,8 +341,7 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: LISTENER_DOCKER_INTERNAL:PLAINTEXT,LISTENER_DOCKER_EXTERNAL:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: LISTENER_DOCKER_INTERNAL
       KAFKA_ADVERTISED_LISTENERS: LISTENER_DOCKER_INTERNAL://broker-ccc:19098,LISTENER_DOCKER_EXTERNAL://${DOCKER_HOST_IP:-127.0.0.1}:9098
-#      KAFKA_ZOOKEEPER_CONNECT: 'zookeeper-ccc:2188'
-      KAFKA_ZOOKEEPER_CONNECT: 'zookeeper-central:2182/ccc'
+      KAFKA_ZOOKEEPER_CONNECT: 'zookeeper-ccc:2188'
       KAFKA_METRIC_REPORTERS: io.confluent.metrics.reporter.ConfluentMetricsReporter
       KAFKA_CONFLUENT_METRICS_REPORTER_BOOTSTRAP_SERVERS: broker-ccc:19098
       KAFKA_JMX_PORT: 8098
@@ -351,8 +350,7 @@ services:
       KAFKA_CONFLUENT_LICENSE_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_CONFLUENT_BALANCER_TOPIC_REPLICATION_FACTOR: 1
     depends_on:
-#      - zookeeper-ccc
-      - zookeeper-central
+      - zookeeper-ccc
 
   control-center:
     image: confluentinc/cp-enterprise-control-center:${CONFLUENT_DOCKER_TAG}
@@ -361,8 +359,7 @@ services:
     networks:
       - n1
     depends_on:
-#      - zookeeper-ccc
-      - zookeeper-central
+      - zookeeper-ccc
       - broker-ccc
     ports:
       - "9021:9021"
