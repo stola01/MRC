@@ -1,9 +1,9 @@
 #!/bin/bash
 
-trap "kill 0" SIGINT
-trap "kill 0" EXIT
-
 TOPICNAME="t1-stretched"
+
+trap "kill 0; rm -f ${TOPICNAME}.dat" SIGINT
+trap "kill 0; rm -f ${TOPICNAME}.dat" EXIT
 
 rm -f ${TOPICNAME}.dat
 (
