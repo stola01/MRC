@@ -121,3 +121,14 @@ docker-compose start broker-west-1 broker-west-2 broker-west-5
 ```
 
 
+
+### 7. Simulate observer catch up
+```
+Stop the brokers that host the observer replicas (broker-west-5, broker-east-6).
+The observer replicas will now fall behind the regular replicas.
+Stop the remaining brokers in the west data center (broker-west-1, broker-west-2).
+Note how this time the producer for t1-stretched-with-observers starts getting "not enough replica" errors as the observer cannot join the ISR list.
+Start the broker with the observer (broker-east-6).
+Note how the broker starts, the observer catches up and joins the ISR list.
+The producer can now carry on as before.
+```
