@@ -9,7 +9,8 @@
 ```
 # Start the services
 docker-compose up -d
-
+```
+```
 # Wait for 60 seconds or so and check that services are running
 docker-compose ps
 ```
