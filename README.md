@@ -41,8 +41,8 @@ Check everything is healthy by pointing a browser at http://localhost:9021
 ### 3. Examine the topic descriptions, note leaders, replicas, observers, and min-insync-replica configurations
 ```
 ./scripts/lhs-describe-topics.sh
-
-
+```
+```
 # Output should look something like this:
 ==> Describe topic: t1-stretched
 
@@ -79,18 +79,21 @@ Topic: t1-stretched-with-observers	TopicId: qx9kT_KHR2a3OBitNxAJLQ	PartitionCoun
 ```
 # Stop the brokers
 docker-compose stop broker-west-1 broker-west-2 broker-west-5
-
-# Notice how the producer for t1-stretched get's producer errors
+```
+```
+# Notice how the producer for t1-stretched get's producer errors;
 ERROR Error when sending message to topic t1-stretched with key: null, value: 55 bytes with error: (org.apache.kafka.clients.producer.internals.ErrorLoggingCallback)
 org.apache.kafka.common.errors.NotEnoughReplicasException: Messages are rejected since there are fewer in-sync replicas than required.
 
 # However the producer to t1-stretched-with-observers continues uninterrupted
 
-# Note both producers will get metadata refresh messages
-
+# Note both producers may get metadata refresh messages
+```
+```
 # Describe the topics
 ./scripts/lhs-describe-topics.sh
-
+```
+```
 # Output should look like below
 # Notice how:
 # - both topics have gone through leader election
