@@ -117,7 +117,8 @@ Topic: t1-stretched-with-observers	TopicId: qx9kT_KHR2a3OBitNxAJLQ	PartitionCoun
 ```
 # Restart the brokers (notice that the producer for t1-stretched starts producing again - producers may get metadata messages)
 docker-compose start broker-west-1 broker-west-2 broker-west-5
-
+```
+```
 # Describe the topics (depending on when this is run, leader election may have run restoring the original leader)
 ./scripts/lhs-describe-topics.sh
 
